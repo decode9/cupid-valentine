@@ -11,8 +11,8 @@ const heartAppear = () => {
     heart.style.position = 'absolute';
     heart.style.bottom = posX + 'px';
     heart.style.left = posY + 'px';
-    
-    if (!(hearts.length > 50)) {
+
+    if (!(hearts.length > 30)) {
         document.body.append(heart);
     }
 }

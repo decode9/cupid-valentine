@@ -37,8 +37,9 @@ const gameOver = (count) => {
     text.style.right = 0;
     text.style.top = 0;
     text.style.margin = 'auto';
-    text.style.width = 'fit-content';
-    text.style.height = 'fit-content';
+    text.style.display = 'flex';
+    text.style.justifyContent = 'center';
+    text.style.alignItems = 'center';
     text.innerHTML = "Perdiste! has alcanzado un total de " + count
     document.body.append(text);
 }
@@ -62,7 +63,7 @@ const checkCollisions = (data, handler) => {
         data['interval'] = setInterval(heartAppear, data['initialTime']);
     }
 
-    if (hearts.length > 50) {
+    if (hearts.length > 30) {
         clearInterval(data['interval']);
         document.removeEventListener('keydown', handler);
         gameOver(data['count']);
