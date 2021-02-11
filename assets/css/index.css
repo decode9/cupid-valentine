@@ -2,4 +2,12 @@
     position: absolute;
     bottom: 0px;
     left: 0px;
+    z-index: 1;
+}
+
+.counter{
+  z-index: 1;
+}
+.gameOver{
+  z-index: 2;
 }
